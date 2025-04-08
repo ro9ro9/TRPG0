@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TRPG
+﻿namespace TRPG
 {
     public class Player
     {
@@ -12,11 +6,23 @@ namespace TRPG
         public int CurHP { get { return curHP; } }
         private int maxHP;
         public int MaxHP { get { return maxHP; } }
-        
-        private int curMP;
-        public int CurMP { get { return curMP; } }
-        private int maxMP;
-        public int MaxMP { get { return maxMP; } }
- 
+
+
+
+        public Player()
+        {
+           // inventory = new Inventory();
+            maxHP = 100;
+            curHP = maxHP;
+        }
+
+        public void Heal(int amount)
+        {
+            curHP += amount;
+            if (curHP > maxHP)
+            {
+                curHP = maxHP;
+            }
+        }
     }
 }

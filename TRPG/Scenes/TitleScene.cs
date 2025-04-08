@@ -38,7 +38,7 @@ namespace TRPG.Scenes
             switch (input)
             {
                 case ConsoleKey.D1:
-                    Game.LoadScene("town");
+                    Game.LoadScene("Town");
                     break;
 
             }

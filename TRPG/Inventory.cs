@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace TRPG
 {
-    internal class Inventory
+    public class Inventory
     {
+        // private List<Item> items;
+        private Stack<string> stack;
+        private int selectIndex;
+
     }
 }

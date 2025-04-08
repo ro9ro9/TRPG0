@@ -18,8 +18,10 @@ namespace TRPG
         {
             sceneDic = new Dictionary<string, Scene>();
             sceneDic.Add("Title", new TitleScene());
-            sceneDic.Add("town", new TownScene());
-            sceneDic.Add("water", new WaterScene());
+            sceneDic.Add("Town", new TownScene());
+            sceneDic.Add("Water", new WaterScene());
+            sceneDic.Add("Forest", new ForestScene());
+            sceneDic.Add("Walk", new WalkScene());
 
             curScene = sceneDic["Title"];
         }
