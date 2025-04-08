@@ -14,6 +14,9 @@ namespace TRPG
         private static Dictionary<string, Scene> sceneDic;
         private static Scene curScene;
 
+        private static Player player;
+        public static Player Player { get { return player; } }
+
         public static void Start()
         {
             sceneDic = new Dictionary<string, Scene>();
@@ -24,12 +27,10 @@ namespace TRPG
             sceneDic.Add("Walk", new WalkScene());
 
             curScene = sceneDic["Title"];
+
+            player = new Player(); 
         }
 
-        public static void End()
-        {
-
-        }
 
         public static void Run()
         {
@@ -46,10 +47,21 @@ namespace TRPG
                 curScene.Wait();
                 curScene.Next();
             }
+            End();
         }
+
         public static void LoadScene(string sceneName)
         {
             curScene = sceneDic[sceneName];
+        }
+
+        public static void End()
+        {
+            gameOver = true;
+            Console.WriteLine("당신은 죽었습니다.");
+            Console.WriteLine("타이틀로 돌아갑니다.");
+            Console.ReadKey(true);
+            Game.LoadScene("Title");
         }
     }
 }
