@@ -46,13 +46,12 @@ namespace TRPG.Scenes
                     break;
                 case ConsoleKey.D3:
                     Console.WriteLine("어슬렁거렸습니다");
-                    Console.WriteLine("체력을 10 잃었습니다.");
                     Console.ReadKey(true);
                     Game.LoadScene("WalkScene");
                     break;
                 default:
                     Console.WriteLine("아무것도 하지 않았습니다");
-                    Console.WriteLine("체력을 10 잃었습니다.");
+                    Console.WriteLine("체력을 5 잃었습니다.");
                     break;
             }
         }

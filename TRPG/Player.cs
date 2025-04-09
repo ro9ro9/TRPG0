@@ -3,27 +3,23 @@
     public class Player
     {
         private int curHP;
-        public int CurHP
-        {
-            get { return curHP; }
-            set
-            {
-                if (curHP > 0 && curHP <= 100)
-                {
-                    curHP = value;
-                }
-            }
-        }
+        public int CurHP { get { return curHP; } }
+
         private int maxHP;
         public int MaxHP { get { return maxHP; } }
 
-
+        public Inventory inventory;
+        private bool gameOver;
 
         public Player()
         {
-            // inventory = new Inventory();
+            inventory = new Inventory();
             maxHP = 100;
             curHP = maxHP;
+            if (curHP == 0)
+            {
+                gameOver = true;
+            }
         }
 
         public void Heal(int amount)

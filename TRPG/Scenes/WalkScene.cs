@@ -10,12 +10,8 @@ namespace TRPG.Scenes
     {
         public override void Choice()
         {
-            throw new NotImplementedException();
-        }
-
-        public override void Next()
-        {
-            throw new NotImplementedException();
+            Console.WriteLine("무언가 발견했습니다!");
+            Console.WriteLine();
         }
 
         public override void Render()
@@ -29,6 +25,10 @@ namespace TRPG.Scenes
         }
 
         public override void Wait()
+        {
+            throw new NotImplementedException();
+        }
+        public override void Next()
         {
             throw new NotImplementedException();
         }

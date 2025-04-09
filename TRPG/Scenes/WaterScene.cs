@@ -30,13 +30,15 @@ namespace TRPG.Scenes
             {
                 case ConsoleKey.D1:
                     Console.WriteLine("물을 얻었습니다.");
-                    Console.WriteLine("체력을 10 잃었습니다.");
+                    Console.WriteLine("체력을 5 잃었습니다.");
+                    Console.WriteLine("현재 체력{0}", CurHP);
                     Console.WriteLine("거점으로 돌아갑니다.");
                     Game.LoadScene("Town");
                     break;
                 case ConsoleKey.D2:
                     Console.WriteLine("바닷물을 섭취했습니다.");
-                    Console.WriteLine("체력을 10 잃었습니다.");
+                    Console.WriteLine("체력을 5 잃었습니다.");
+                    Console.WriteLine("현재 체력{0}", CurHP);
                     Console.WriteLine("거점으로 돌아갑니다.");
                     Game.LoadScene("Town");
                     break;
