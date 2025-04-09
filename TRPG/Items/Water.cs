@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TRPG.Items
+﻿namespace TRPG.Items
 {
     internal class Water : Item
     {
+        public Water()
+        {
+            string name = "물";
+        }
         public override void Use()
         {
             Game.Player.Heal(15);

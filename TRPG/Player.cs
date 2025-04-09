@@ -9,17 +9,15 @@
         public int MaxHP { get { return maxHP; } }
 
         public Inventory inventory;
-        private bool gameOver;
+
+
 
         public Player()
         {
             inventory = new Inventory();
             maxHP = 100;
-            curHP = maxHP;
-            if (curHP == 0)
-            {
-                gameOver = true;
-            }
+            // curHP = maxHP;
+            curHP = 100;
         }
 
         public void Heal(int amount)
@@ -29,6 +27,11 @@
             {
                 curHP = maxHP;
             }
+        }
+
+        public void GetDamage(int damage)
+        {
+            curHP -= damage;
         }
     }
 }

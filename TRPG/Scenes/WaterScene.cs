@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TRPG.Enemys;
+using TRPG.Items;
 
 namespace TRPG.Scenes
 {
@@ -30,15 +32,16 @@ namespace TRPG.Scenes
             {
                 case ConsoleKey.D1:
                     Console.WriteLine("물을 얻었습니다.");
+
                     Console.WriteLine("체력을 5 잃었습니다.");
-                    Console.WriteLine("현재 체력{0}", CurHP);
+                    Console.WriteLine("현재 체력{0}", Game.Player.CurHP - 5);
                     Console.WriteLine("거점으로 돌아갑니다.");
                     Game.LoadScene("Town");
                     break;
                 case ConsoleKey.D2:
                     Console.WriteLine("바닷물을 섭취했습니다.");
                     Console.WriteLine("체력을 5 잃었습니다.");
-                    Console.WriteLine("현재 체력{0}", CurHP);
+                    Console.WriteLine("현재 체력{0}", Game.Player.CurHP - 5);
                     Console.WriteLine("거점으로 돌아갑니다.");
                     Game.LoadScene("Town");
                     break;

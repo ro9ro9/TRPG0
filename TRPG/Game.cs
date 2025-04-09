@@ -57,11 +57,15 @@ namespace TRPG
 
         public static void End()
         {
-            gameOver = true;
-            Console.WriteLine("당신은 죽었습니다.");
-            Console.WriteLine("타이틀로 돌아갑니다.");
-            Console.ReadKey(true);
-            Game.LoadScene("Title");
+            if (Player.CurHP <= 0)
+            {
+                gameOver = true;
+                Console.WriteLine("당신은 죽었습니다.");
+                Console.WriteLine("타이틀로 돌아갑니다.");
+                Console.ReadKey(true);
+                Game.LoadScene("Title");
+
+            }
         }
     }
 }

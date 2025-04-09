@@ -52,6 +52,7 @@ namespace TRPG.Scenes
                 default:
                     Console.WriteLine("아무것도 하지 않았습니다");
                     Console.WriteLine("체력을 5 잃었습니다.");
+                    Console.WriteLine("현재 체력{0}", Game.Player.CurHP - 5);
                     break;
             }
         }

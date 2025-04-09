@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TRPG.Enemys
+﻿namespace TRPG.Enemys
 {
-    public class movings
+    public class MapDamage : Damages
     {
-
+        public override void Damage()
+        {
+            Game.Player.GetDamage(5);
+        }
     }
 }

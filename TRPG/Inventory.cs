@@ -37,6 +37,5 @@ namespace TRPG
         {
             items[index].Use();
         }
-
     }
 }
