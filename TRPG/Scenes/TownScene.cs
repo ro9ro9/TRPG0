@@ -25,36 +25,39 @@ namespace TRPG.Scenes
             Console.WriteLine("3. 어슬렁거린다.");
         }
 
-        public override void Wait()
-        {
-            Console.WriteLine("계속하려면 아무키나 눌러주세요.");
-            Console.ReadKey(true);
-        }
         public override void Result()
         {
             switch (input)
             {
                 case ConsoleKey.D1:
                     Console.WriteLine("식수를 구하러 갑니다.");
+                    Console.WriteLine("아무키나 눌러주세요.");
                     Console.ReadKey(true);
                     Game.LoadScene("Water");
                     break;
                 case ConsoleKey.D2:
                     Console.WriteLine("숲에 갑니다.");
+                    Console.WriteLine("아무키나 눌러주세요.");
                     Console.ReadKey(true);
                     Game.LoadScene("Forest");
                     break;
                 case ConsoleKey.D3:
                     Console.WriteLine("어슬렁거렸습니다");
+                    Console.WriteLine("아무키나 눌러주세요.");
                     Console.ReadKey(true);
-                    Game.LoadScene("WalkScene");
+                    Game.LoadScene("Walk");
                     break;
-                default:
-                    Console.WriteLine("아무것도 하지 않았습니다");
-                    Console.WriteLine("체력을 5 잃었습니다.");
-                    Console.WriteLine("현재 체력{0}", Game.Player.CurHP - 5);
-                    break;
+               // default:
+               //     Console.WriteLine("아무것도 하지 않았습니다");
+               //     Console.WriteLine("체력을 5 잃었습니다.");
+               //     Console.WriteLine("현재 체력{0}", Game.Player.CurHP - 5);
+               //     break;
             }
+        }
+        public override void Wait()
+        {
+            Console.WriteLine("계속하려면 아무키나 눌러주세요.");
+            Console.ReadKey(true);
         }
         public override void Next()
         {

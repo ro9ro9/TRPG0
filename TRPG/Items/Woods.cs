@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TRPG
+namespace TRPG.Items
 {
-    public abstract class Damages
+    public class Woods
     {
-      // public abstract void DamageName();
-        public abstract void Damage();
+        public Woods() { string name = "땔감"; }
     }
 }

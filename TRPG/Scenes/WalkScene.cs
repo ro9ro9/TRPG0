@@ -1,36 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TRPG.Scenes
+﻿namespace TRPG.Scenes
 {
     public class WalkScene : Scene
     {
         public override void Choice()
         {
-            Console.WriteLine("무언가 발견했습니다!");
-            Console.WriteLine();
+
         }
 
         public override void Render()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("주변을 둘러봅니다");
+            Console.WriteLine("아무키나 눌러주세요.");
+            Console.ReadKey(true);
         }
 
+        Random random = new Random();
         public override void Result()
         {
-            throw new NotImplementedException();
+            int randomValue = random.Next(0, 100);
+            if (randomValue <= 5)
+            {
+                Console.WriteLine("무언가 발견했습니다!");
+                Console.WriteLine("축하드립니다! 건강식 통조림을 얻었습니다!");
+            }
+            else if (randomValue <= 20)
+            {
+                Console.WriteLine("무언가를 발견했습니다!");
+                Console.WriteLine("조개 껍질을 발견했습니다!");
+            }
+            else { Console.WriteLine("아무것도 발견하지 못했습니다..."); }
+            Console.WriteLine("거점으로 돌아갑니다.");
+            Game.LoadScene("Town");
         }
 
         public override void Wait()
         {
-            throw new NotImplementedException();
+            
         }
         public override void Next()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("거점으로 돌아갑니다.");
+            Game.LoadScene("Town");
         }
     }
 }

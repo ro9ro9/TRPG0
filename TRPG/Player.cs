@@ -3,12 +3,23 @@
     public class Player
     {
         private int curHP;
-        public int CurHP { get { return curHP; } }
+        public int CurHP
+        {
+            get { return curHP; }
+            set
+            {
+                if (Game.Player.CurHP <= 0)
+                {
+                    Game.End();
+                }
+            }
+        }
 
         private int maxHP;
         public int MaxHP { get { return maxHP; } }
 
-        public Inventory inventory;
+        private Inventory inventory;
+        public Inventory Inventory { get { return inventory; } }
 
 
 
@@ -16,9 +27,9 @@
         {
             inventory = new Inventory();
             maxHP = 100;
-            // curHP = maxHP;
-            curHP = 100;
+            curHP = maxHP;
         }
+
 
         public void Heal(int amount)
         {
@@ -32,6 +43,16 @@
         public void GetDamage(int damage)
         {
             curHP -= damage;
+        }
+
+        public void Action(ConsoleKey input)
+        {
+            switch (input)
+            {
+                case ConsoleKey.I:
+                    inventory.Open();
+                    break;
+            }
         }
     }
 }

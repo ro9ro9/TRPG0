@@ -2,9 +2,11 @@
 {
     public abstract class Item
     {
+        public string name;
+        public string description;
         public void Interact(Player player)
         {
-            player.inventory.Add(this);
+            player.Inventory.Add(this);
         }
 
         public abstract void Use();

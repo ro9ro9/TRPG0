@@ -14,7 +14,7 @@ namespace TRPG.Scenes
         {
             Console.WriteLine("1. 구덩이를 팝니다.");
             Console.WriteLine("2. 바다로 갑니다.");
-            Console.WriteLine("3. 귀환합니다.");
+            Console.WriteLine("3. 거점으로 돌아갑니다.");
             Console.WriteLine();
         }
 
@@ -32,7 +32,7 @@ namespace TRPG.Scenes
             {
                 case ConsoleKey.D1:
                     Console.WriteLine("물을 얻었습니다.");
-
+                    
                     Console.WriteLine("체력을 5 잃었습니다.");
                     Console.WriteLine("현재 체력{0}", Game.Player.CurHP - 5);
                     Console.WriteLine("거점으로 돌아갑니다.");
@@ -40,8 +40,8 @@ namespace TRPG.Scenes
                     break;
                 case ConsoleKey.D2:
                     Console.WriteLine("바닷물을 섭취했습니다.");
-                    Console.WriteLine("체력을 5 잃었습니다.");
-                    Console.WriteLine("현재 체력{0}", Game.Player.CurHP - 5);
+                    Console.WriteLine("체력을 15 잃었습니다.");
+                    Console.WriteLine("현재 체력{0}", Game.Player.CurHP - 15);
                     Console.WriteLine("거점으로 돌아갑니다.");
                     Game.LoadScene("Town");
                     break;
@@ -54,7 +54,7 @@ namespace TRPG.Scenes
 
         public override void Wait()
         {
-
+            
         }
 
         public override void Next()
