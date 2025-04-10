@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TRPG.Items
+﻿namespace TRPG.Items
 {
     public class Woods
     {
-        public Woods() { string name = "땔감"; }
+        public Woods() 
+        { 
+            string name = "땔감"; 
+            string description = "3개를 모아 불을 유지할 수 있습니다.";
+        }
     }
 }

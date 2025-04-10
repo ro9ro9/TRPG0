@@ -1,6 +1,6 @@
 ﻿namespace TRPG.Items
 {
-    internal class Water : Item
+    public class Water : Item
     {
         public Water()
         {

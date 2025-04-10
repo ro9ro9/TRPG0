@@ -1,10 +1,11 @@
 ﻿namespace TRPG.Items
 {
-    internal class Seashell : Item
+    public class SeaShell : Item
     {
-        public Seashell()
+        public SeaShell()
         {
             string name = "조개 껍질";
+            string description = "5개를 모으면 장신구를 만들 수 있습니다.";
         }
         public override void Use()
         {

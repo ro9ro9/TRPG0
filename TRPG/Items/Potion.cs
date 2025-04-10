@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace TRPG.Items
 {
-    internal class Potion : Item
+    public class Potion : Item
     {
         public Potion()
         {
             string name = "약초";
+            string description = "체력을 20 회복하는 약초입니다.";
         }
         public override void Use()
         {

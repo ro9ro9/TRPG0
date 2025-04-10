@@ -22,11 +22,13 @@
             {
                 Console.WriteLine("무언가 발견했습니다!");
                 Console.WriteLine("축하드립니다! 건강식 통조림을 얻었습니다!");
+                //Player.Inventory.Add("건강식 통조림");
             }
             else if (randomValue <= 20)
             {
                 Console.WriteLine("무언가를 발견했습니다!");
                 Console.WriteLine("조개 껍질을 발견했습니다!");
+                //Player.Inventory.Add("조개 껍질");
             }
             else { Console.WriteLine("아무것도 발견하지 못했습니다..."); }
             Console.WriteLine("거점으로 돌아갑니다.");
@@ -39,8 +41,7 @@
         }
         public override void Next()
         {
-            Console.WriteLine("거점으로 돌아갑니다.");
-            Game.LoadScene("Town");
+
         }
     }
 }

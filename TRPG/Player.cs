@@ -8,6 +8,7 @@
             get { return curHP; }
             set
             {
+                curHP = value;
                 if (Game.Player.CurHP <= 0)
                 {
                     Game.End();
@@ -43,6 +44,10 @@
         public void GetDamage(int damage)
         {
             curHP -= damage;
+            if (curHP <= 0)
+            {
+                Game.End();
+            }
         }
 
         public void Action(ConsoleKey input)

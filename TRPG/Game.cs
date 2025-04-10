@@ -9,7 +9,7 @@ namespace TRPG
 {
     public static class Game
     {
-        private static bool gameOver;
+        private static bool gameOver => Player.CurHP <= 0;
 
         private static Dictionary<string, Scene> sceneDic;
         private static Scene curScene;
@@ -57,9 +57,8 @@ namespace TRPG
 
         public static void End()
         {
-            if (Player.CurHP <= 0)
+            if (gameOver == true)
             {
-                gameOver = true;
                 Console.WriteLine("당신은 죽었습니다.");
                 Console.WriteLine("타이틀로 돌아갑니다.");
                 Console.ReadKey(true);

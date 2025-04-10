@@ -32,7 +32,7 @@ namespace TRPG.Scenes
             {
                 case ConsoleKey.D1:
                     Console.WriteLine("물을 얻었습니다.");
-                    
+                    //Player.Inventory.Add("물");
                     Console.WriteLine("체력을 5 잃었습니다.");
                     Console.WriteLine("현재 체력{0}", Game.Player.CurHP - 5);
                     Console.WriteLine("거점으로 돌아갑니다.");
