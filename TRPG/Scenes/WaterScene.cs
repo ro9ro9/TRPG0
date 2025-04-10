@@ -35,6 +35,7 @@ namespace TRPG.Scenes
                     //Player.Inventory.Add("물");
                     Console.WriteLine("체력을 5 잃었습니다.");
                     Console.WriteLine("현재 체력{0}", Game.Player.CurHP - 5);
+                    //Game.End();
                     Console.WriteLine("거점으로 돌아갑니다.");
                     Game.LoadScene("Town");
                     break;

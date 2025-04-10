@@ -10,6 +10,8 @@
         public override void Render()
         {
             Console.WriteLine("주변을 둘러봅니다");
+            Console.WriteLine("체력을 5 잃었습니다.");
+            Console.WriteLine("현재 체력{0}", Game.Player.CurHP - 5);
             Console.WriteLine("아무키나 눌러주세요.");
             Console.ReadKey(true);
         }

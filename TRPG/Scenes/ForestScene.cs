@@ -22,10 +22,6 @@ namespace TRPG.Scenes
             Console.WriteLine("4. 귀환합니다.");
         }
 
-        public override void Next()
-        {
-           
-        }
         Random random = new Random();
         public override void Result()
         {
@@ -81,6 +77,10 @@ namespace TRPG.Scenes
         public override void Wait()
         {
            
+        }
+        public override void Next()
+        {
+
         }
     }
 }
